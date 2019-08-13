@@ -1,4 +1,4 @@
-public class Home{
+public class HPyramid{
     public static void main(String[] args){
         int i,j;
         for(i = 0; i < 5; i++){

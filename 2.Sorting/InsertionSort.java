@@ -12,6 +12,7 @@ public class InsertionSort {
         }
         elements.close();
         insertionSort(list, noOfElements);
+        printArray(list);
     }
 
     public static void insertionSort(int[] list, int noOfElements) {
@@ -26,8 +27,11 @@ public class InsertionSort {
             }
             list[i+1] = key;
         }
+    }
+
+    public static void printArray(int[] list) {
         System.out.println("Sorted Array:");
-        for(int i = 0; i < noOfElements; i++) {
+        for (int i = 0; i < list.length; i++) {
             System.out.print(list[i] + " ");
         }
     }

@@ -4,12 +4,9 @@ public class ReverseLeftPyramid {
         System.out.println("How Many lines you want?");
         Scanner lines = new Scanner(System.in);
         int noOfLines = lines.nextInt();
-        for(int i = noOfLines; i > 0; i--){
-            for(int j = 1; j < i; j++){
-                System.out.print(" ");
-            }
-            for(int j = noOfLines + 1; j > i; j--){
-                System.out.print("*");
+        for(int i = 0; i < noOfLines; i++){
+            for(int j = noOfLines; j > i; j--){
+                System.out.print("* ");
             }
             System.out.println();
         }

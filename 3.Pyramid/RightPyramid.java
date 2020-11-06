@@ -4,6 +4,11 @@ public class RightPyramid {
         System.out.println("How Many lines you want?");
         Scanner lines = new Scanner(System.in);
         int noOfLines = lines.nextInt();
+        lines.close();
+        printPyramid(noOfLines);
+    }
+
+    public static void printPyramid(int noOfLines) {
         for(int i = 1; i <= noOfLines; i++){
             for(int j = noOfLines*2; j > i*2; j--){
                 System.out.print(" ");
@@ -13,6 +18,5 @@ public class RightPyramid {
             }
             System.out.println();
         }
-        lines.close();
     }
 }

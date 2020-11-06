@@ -1,18 +1,22 @@
 import java.util.Scanner;
 public class QuickSort {
     public static void main(String[] args) {
-        System.out.println("How many positive integers you want to enter?");
+        int[] list = getArray();
+        quickSort(list, 0, list.length - 1);
+        printArray(list);
+    }
+
+    public static int[] getArray() {
+        System.out.println("How many elements you want to enter?");
         Scanner elements = new Scanner(System.in);
         int noOfElements = elements.nextInt();
         int[] list = new int[noOfElements];
-        System.out.println("Enter " + noOfElements + " elements");
+        System.out.println("Enter " + noOfElements + " integers");
         for (int i = 0; i < noOfElements; i++) {
             list[i] = elements.nextInt();
         }
         elements.close();
-        quickSort(list, 0, list.length - 1);
-        System.out.println("Sorted Array:\n");
-        printArray(list);
+        return list;
     }
 
     public static int partition(int[] list, int start, int stop) {
@@ -44,6 +48,7 @@ public class QuickSort {
 
 
     public static void printArray(int[] list) {
+        System.out.println("Sorted Array:");
         for (int i : list) {
             System.out.print(i + " ");
         }

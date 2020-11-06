@@ -2,18 +2,22 @@ import java.util.Scanner;
 
 public class MergeSort {
     public static void main(String[] args) {
-        System.out.println("How many positive integers you want to enter?");
+        int[] list = getArray();
+        mergeSort(list);
+        printArray(list);
+    }
+
+    public static int[] getArray() {
+        System.out.println("How many elements you want to enter?");
         Scanner elements = new Scanner(System.in);
         int noOfElements = elements.nextInt();
         int[] list = new int[noOfElements];
-        System.out.println("Enter " + noOfElements + " elements");
+        System.out.println("Enter " + noOfElements + " integers");
         for (int i = 0; i < noOfElements; i++) {
             list[i] = elements.nextInt();
         }
         elements.close();
-        mergeSort(list);
-        System.out.println("Sorted Array:");
-        printArray(list);
+        return list;
     }
 
     public static void mergeSort(int[] list) {
@@ -62,6 +66,7 @@ public class MergeSort {
     }
 
     public static void printArray(int[] list) {
+        System.out.println("Sorted Array:");
         for (int i : list) {
             System.out.print(i + " ");
         }

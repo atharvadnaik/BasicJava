@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class InsertionSort {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] list = getArray();
-        insertionSort(list, list.length);
+        selectionSort(list);
         printArray(list);
     }
 
@@ -20,24 +20,28 @@ public class InsertionSort {
         return list;
     }
 
-    public static void insertionSort(int[] list, int noOfElements) {
-        for(int j = 1; j < noOfElements; j++) {
-            int i;
-            int key;
-            key = list[j];
-            i = j - 1;
-            while(i >= 0 && list[i] > key) {
-                list[i+1] = list[i];
-                i = i - 1;
+    public static void selectionSort(int[] list) {
+        int length = list.length;
+        for(int i = 0; i < length - 1; i++) {
+            int min = i;
+            for(int j = i + 1; j < length; j++){
+                if(list[j] < list[min]) {
+                    swapElements(list, j, min);
+                }
             }
-            list[i+1] = key;
         }
+    }
+
+    public static void swapElements(int[] list, int i, int j) {
+        int temp = list[j];
+        list[j] = list[i];
+        list[i] = temp;
     }
 
     public static void printArray(int[] list) {
         System.out.println("Sorted Array:");
-        for (int i = 0; i < list.length; i++) {
-            System.out.print(list[i] + " ");
+        for (int i : list) {
+            System.out.print(i + " ");
         }
     }
 }

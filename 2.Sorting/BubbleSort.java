@@ -2,17 +2,22 @@ import java.util.Scanner;
 
 public class BubbleSort {
     public static void main(String[] args) {
+        int[] list = getArray();
+        bubbleSort(list, list.length);
+        printArray(list);
+    }
+
+    public static int[] getArray() {
         System.out.println("How many elements you want to enter?");
         Scanner elements = new Scanner(System.in);
         int noOfElements = elements.nextInt();
-        System.out.println("Enter " + noOfElements + " elements");
         int[] list = new int[noOfElements];
-        for(int i = 0; i < noOfElements; i++) {
+        System.out.println("Enter " + noOfElements + " integers");
+        for (int i = 0; i < noOfElements; i++) {
             list[i] = elements.nextInt();
         }
         elements.close();
-        bubbleSort(list, noOfElements);
-        printArray(list);
+        return list;
     }
 
     public static void bubbleSort(int[] list, int noOfElements) {

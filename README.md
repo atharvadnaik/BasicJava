@@ -1,9 +1,6 @@
-# BasicJava
-<html>
-  <body>
-    <h1> Hey reader!</h1>
-      <h3> Atharva here. Just trying to compile basic java programs</h3><br>
-        <h4> Some might look silly and elementry but that is what do when we are trying a new programing language,right?</h4><br><br>
-          <h1>ENJOY !</h1>
-            </body>
-            </html>
+## Hey reader!
+---
+### Atharva here. Just trying to make a compilation of basic java programs.
+#### Some might look silly and elementry but that is what do when we are trying a new programing language,right?
+---
+### ENJOY !
